@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Search Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8U4j5z5l5c5e5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous" />
+
+    <!-- Add the SVG file as the favicon -->
+    <link rel="icon" type="image/svg+xml" href="android-2025857.svg">
+
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        /* Slideshow background */
+            .slideshow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .slideshow img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        animation: fade 35s infinite; /* Total duration = 5s per image * 7 images */
+    }
+
+    .slideshow img:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .slideshow img:nth-child(2) {
+        animation-delay: 5s;
+    }
+
+    .slideshow img:nth-child(3) {
+        animation-delay: 10s;
+    }
+
+    .slideshow img:nth-child(4) {
+        animation-delay: 15s;
+    }
+
+    .slideshow img:nth-child(5) {
+        animation-delay: 20s;
+    }
+
+    .slideshow img:nth-child(6) {
+        animation-delay: 25s;
+    }
+
+    .slideshow img:nth-child(7) {
+        animation-delay: 30s;
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 1;
+        }
+
+        80% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            /* Dark background */
+            color: #c9d1d9;
+            /* Light text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main container */
+        .main-container {
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        /* Welcome message */
+        .welcome-message h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        /* Chat input container */
+        .chat-input-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #161b22;
+            /* Darker background for input */
+            border-radius: 50px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .chat-input-container input {
+            flex: 1;
+            border: none;
+            background: none;
+            color: #c9d1d9;
+            font-size: 16px;
+            padding: 10px;
+            outline: none;
+        }
+
+        .chat-input-container button {
+            background-color: #238636;
+            /* Green button */
+            color: #ffffff;
+            border: none;
+            border-radius: 10%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .chat-input-container button:hover {
+            background-color: #2ea043;
+            /* Lighter green on hover */
+        }
+
+        /* Quick responses */
+        .quick-responses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .quick-responses button {
+            background-color: #21262d;
+            /* Dark button background */
+            color: #c9d1d9;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .quick-responses button:hover {
+            background-color: #30363d;
+            /* Slightly lighter on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div id="chat-window">
+            <div id="messages">
+                <div class="bot-message">
+                    Welcome! I can search through the data for you. What would you like to find?
+                </div>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type your search query...">
+            <button id="send-btn">➤</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+    
+    </html>
+    
+    <!-- Slideshow background -->
+    <div class="slideshow">
+        <img src="images/autumn-8620917_1280.jpg" alt="Background 1">
+        <img src="images/chess-9536049_1920.jpg" alt="Background 2"> 
+        <img src="images/heaven-5114501_1280.jpg" alt="Background 3">
+        <img src="images/lighthouse-6785763_1280.jpg" alt="Background 4">
+        <img src="images/space-9250868_1280.jpg" alt="Background 5">
+        <img src="images/ufo-1265186_1280.jpg" alt="Background 6">
+        <img src="images/universe-2742113_1280.jpg" alt="Background 7">
+
+
+        
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8U4j5z5l5c5e5e5e5e5e5e5e5e5e5e5e5e"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<!-- <div class="main-container">
+     Welcome message 
+    <div class="welcome-message">
+        <h1>Hey, nice to see you. What's new?</h1>
+    </div>
+
+    - Chat input box --
+    <div class="chat-input-container">
+        <input type="text" id="user-input" placeholder="Message Here" />
+        <div style="padding: 10px;"><br></div>
+        <button id="send-btn">
+            <img src="images/paper-airplane-3128885_1280.png" alt="Send" style="width: 40px; height: 40px;">
+        </button>
+    </div>
+
+     Quick response buttons --
+    <div class="quick-responses">
+        <button>Write a first draft</button>
+        <button>Create an image</button>
+        <button>Get help shopping</button>
+        <button>Take a quiz</button>
+        <button>Find restaurants</button>
+        <button>Get sports scores</button>
+        <button>Get stock prices</button>
+        <button>Create a podcast</button>
+    </div>
+</div> -->
