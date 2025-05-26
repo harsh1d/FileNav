@@ -27,6 +27,14 @@ Follow these steps to set up and run FileNav:
 4️⃣ **Search Functionality:**  
    Once redirected to the main search page, enter your query. The browser will fetch results by searching the connected database.  
 
+5️⃣ Download Node Modules: Run the following command to install the required dependencies:
+
+```bash
+npm install
+```
+
+Ensure that you have Node.js installed before running this command.
+
 ## 🛠 Features  
 ✨ Real-time search functionality  
 🔍 Seamless file & database navigation  
